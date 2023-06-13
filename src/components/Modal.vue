@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import customers from "../data/customers.js"; // Customers data sını import ediyoruz
+import customers from "../data/customers"
 
 export default {
   props: ["showModal"],

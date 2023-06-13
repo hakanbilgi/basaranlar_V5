@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="form-group m-2">
+      <div  class="form-group m-2">
         <div class="col-3">
           <label for="selected" class="form-label col-3 w-75"
             ><i
@@ -53,7 +53,7 @@
               style="color: #74829a; margin-right: 10px"></i
             >Müşteri</label
           >
-          <button class="btn btn-danger" @click.stop="openModal">
+          <button class="btn btn-danger" @click="openModal">
             Müşteri Seç
           </button>
         </div>
@@ -76,7 +76,7 @@
           </select>
         </div>
       </div>
-      <div class="form-group m-2">
+      <div  class="form-group m-2">
         <div class="col-3">
           <label for="MusteriBilgileri" class="form-label col-3 w-75"
             ><i
