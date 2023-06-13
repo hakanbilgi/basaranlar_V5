@@ -25,28 +25,24 @@
 </template>
 
 <script>
-import axios from "axios"; // Axios kütüphanesini import ediyoruz
+import customers from "../data/customers.js"; // Customers data sını import ediyoruz
 
 export default {
-  props: ["showModal"], // showModal verisini prop olarak alıyoruz
+  props: ["showModal"],
   data() {
     return {
-      customers: [],
-      searchText: "",
-      selectedCustomer: {},
+      customers: [], // Müşterileri tutacak bir dizi tanımlıyoruz
+      searchText: "", // Arama metnini tutacak bir veri tanımlıyoruz
+      // Burada selectedCustomer verisini bir obje olarak tanımlıyoruz
+      selectedCustomer: {}, // Seçilen müşteriyi tutacak bir veri tanımlıyoruz
     };
   },
   mounted() {
-    axios
-      .get("https://example.com/api/customers")
-      .then((response) => {
-        this.customers = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // Component yüklendiğinde customers data sını kullanıyoruz
+    this.customers = customers;
   },
   computed: {
+    // Müşterileri arama metnine göre filtreleyen bir computed property yazıyoruz
     filteredCustomers() {
       return this.customers.filter((customer) =>
         customer.unvan.toLowerCase().includes(this.searchText.toLowerCase())
@@ -54,17 +50,23 @@ export default {
     },
   },
   methods: {
+    // Modalı kapatan bir fonksiyon yazıyoruz
     closeModal() {
       this.$emit("close");
     },
+    // Seçilen müşteriyi ana ekrana basan bir fonksiyon yazıyoruz
     selectCustomer() {
+      // Ana ekrandaki form taglerini seçiyoruz
       let form = document.getElementById("form");
+      // Formun içindeki inputları seçiyoruz
       let inputs = form.getElementsByTagName("input");
+      // Inputların değerlerini seçilen müşterinin verileriyle dolduruyoruz
       inputs[0].value = this.selectedCustomer.id;
       inputs[1].value = this.selectedCustomer.unvan;
       inputs[2].value = this.selectedCustomer.vergiDairesi;
       inputs[3].value = this.selectedCustomer.vergiNo;
       inputs[4].value = this.selectedCustomer.adres;
+      // Modalı kapatıyoruz
       this.closeModal();
     },
   },
