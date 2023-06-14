@@ -31,18 +31,29 @@
           >
         </div>
 
-        <div class="col-9">
-          <select
-            class="form-select fw-bold"
-            aria-label="Default select example"
-            id="tip"
-            name="tip"
-            v-model.number="tipValue">
-            <option selected>---Lütfen Seçiniz---</option>
-            <option value="2">Alış</option>
-            <option value="3">Satış</option>
-          </select>
-        </div>
+        <div class="col-9 d-inline-flex">
+          <div class="m-2">
+            <input
+              type="radio"
+              id="tip"
+              name="tip"
+              class="m-1"
+              v-model.trim.lazy="tipValue"
+            />
+            <label for="product1" class="text-dark">Alış</label>
+          </div>
+          <div class="m-2">
+            <input
+              type="radio"
+              id="tip"
+              name="tip"
+              class="m-1"
+              v-model.trim.lazy="tipValue"
+            />
+            <label for="product2" class="text-dark">Satış</label>
+          </div>
+          </div>
+
       </div>
 
       <div  class="form-group m-2">
