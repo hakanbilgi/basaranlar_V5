@@ -64,9 +64,10 @@
               style="color: #74829a; margin-right: 10px"></i
             >Müşteri</label
           >
-          <button class="btn btn-danger" @click="openModal">
+          <a class="btn btn-danger" @click="openModal">
             Müşteri Seç
-          </button>
+          </a>
+          
         </div>
         <div class="col-9">
           <select
@@ -271,7 +272,7 @@ export default {
     return {
       // Modalın açık olup olmadığını kontrol eden bir değişken tanımlıyoruz
       // Burayı data olarak tanımladık
-      showModal: false,
+      showModal: true,
       formattedDate: new Date().toISOString().substring(0, 10),
       formattedTime:
         String(new Date().getHours()).padStart(2, "0") +
@@ -297,6 +298,7 @@ export default {
     // Modalı açan ve kapatan bir fonksiyon yazıyoruz
     openModal() {
       this.showModal = !this.showModal;
+      alert("tıklandı");
     },
     sendData() {
       // KAYDET butonuna tıklandığında bu fonksiyon çalışıyor
