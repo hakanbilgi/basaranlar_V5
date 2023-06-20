@@ -14,11 +14,12 @@
             margin-bottom: 20px !important;
             background-color: #f7f7f6 !important;
             font-weight: bold;
+            
           "
         >
-          <div class="col-3">Ürün / Hizmet</div>
-          <div class="col-2">Depo</div>
-          <div class="col-2">Birim</div>
+          <div class="col-3" style="text-align: center;">Ürün / Hizmet</div>
+          <div class="col-2" style="text-align: center;">Depo</div>
+          <div class="col-2" style="text-align: center;">Birim</div>
           <div class="col-1">Miktar</div>
           <div class="col-1">Birim Fiyat</div>
           <div class="col-1">KDV</div>
