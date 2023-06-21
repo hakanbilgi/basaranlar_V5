@@ -16,7 +16,7 @@
           placeholder="Ara..."
           v-model="searchTerm"
         />
-        <!-- computed özelliği ile filtrelenmiş seçenekleri göster -->
+       
         <ul class="options-list">
           <li v-if="selectedCustomer" @click="selectCustomer(selectedCustomer.id)">
         {{ selectedCustomer.title }}
