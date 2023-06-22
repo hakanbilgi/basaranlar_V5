@@ -66,6 +66,7 @@
       ></div>
 
       <div class="save-footer float-end">
+
         <button
           type="button"
           class="fixed-button btn btn-success p-1 fs-6 px-3 fw-bold m-3"
@@ -73,33 +74,41 @@
         >
           <i class="fas fa-save" style="margin-right: 10px"></i>KAYDET
         </button>
+
       </div>
     </form>
   </div>
 </template>
 
 <script>
+
 import NewDiv from "./NewDiv.vue";
 import axios from "axios";
 import * as Vue from "vue";
 
 export default {
+  
   name: "ProductService",
   components: {
     NewDiv,
   },
+
   data() {
+
     return {
       siraNo: 0,
       rows: [],
     };
   },
+
   methods: {
+
     confirmClearFormAndRefreshPage() {
       if (confirm("İşlemi onaylıyor musunuz?")) {
         window.location.reload();
       }
     },
+
     sendProduct() {
       // Girilen veriler bir obje haline dönüştürülüyor
       const productData = this.rows.map((row) => row.productData); // Rows dizisindeki her satırın productData verisi alınıyor
@@ -113,6 +122,7 @@ export default {
           alert("Ürün kaydedilirken bir hata oluştu.");
         });
     },
+
     removeNewDiv(siraNo, index) {
       // Splice yöntemi kullanılarak indexine göre satır siliniyor
       this.rows.splice(index, 1);
@@ -121,6 +131,7 @@ export default {
         this.rows[i].siraNo--;
       }
     },
+
     createNewDiv() {
       this.siraNo = this.rows.length + 1;
       // Yeni bir satır oluşturup sıra numarası ve unique bir ID ekleniyor
@@ -131,6 +142,7 @@ export default {
         productData: {},
       });
     },
+
     updateProductData(index, data) {
       // NewDiv bileşeninden gelen veri rows dizisindeki ilgili satırın productData verisine atanıyor
       this.rows[index].productData = data;
@@ -139,7 +151,9 @@ export default {
 };
 </script>
 
+
 <style scoped>
+
 .product-service {
   border: 1px solid black;
   padding: 10px;
