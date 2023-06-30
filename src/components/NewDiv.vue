@@ -107,12 +107,14 @@
 </template>
 
 <script>
+
 import { defineComponent, ref, computed, reactive } from "vue"; // Burada reactive fonksiyonunu import ettik
 import orders from "../data/data.js";
 
 export default defineComponent({
   name: "NewDiv",
   props: ["siraNo", "divCount", "rows"],
+
   setup() {
     const selectedOrder = ref(null);
     const selectedBarcode = ref("");
@@ -121,6 +123,7 @@ export default defineComponent({
     const ProductUnitPrice = ref(selectedOrder.value?.ProductUnitPrice || 0);
 
     // Burada state adında bir reactive nesne tanımladık ve içinde quantity.value ve taxRate.value değerlerini tanımladık
+    
     const state = reactive({
       quantity: { value: 1 },
       taxRate: { value: 0 },
