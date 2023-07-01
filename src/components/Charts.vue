@@ -3,31 +3,36 @@
     <div class="form-group m-2">
       <div class="col-3">
         <label for="selected" class="form-label col-3 w-75"
-          ><i class="fas fa-users" style="color: #74829a; margin-right: 10px"></i
+          ><i
+            class="fas fa-users"
+            style="color: #74829a; margin-right: 10px"></i
           >Müşteri Listesi</label
         >
       </div>
       <div class="col-4">
         <!-- v-model ile arama terimini bağla -->
         <input
-        style="border-style: solid; border-color: aqua;"
+          style="border-style: solid; border-color: aqua"
           type="text"
           class="form-control bi bi-search"
           placeholder="Ara..."
-          v-model="searchTerm"
-        />
-       
+          v-model="searchTerm" />
+
         <ul class="options-list">
-          <li v-if="selectedCustomer" @click="selectCustomer(selectedCustomer.id)">
-        {{ selectedCustomer.title }}
-      </li>
+          <li
+            v-if="selectedCustomer"
+            @click="selectCustomer(selectedCustomer.id)">
+            {{ selectedCustomer.title }}
+          </li>
         </ul>
       </div>
     </div>
     <div class="form-group m-2">
       <div class="col-3">
         <label for="MusteriBilgileri" class="form-label col-3 w-75"
-          ><i class="fas fa-id-card" style="color: #74829a; margin-right: 10px"></i
+          ><i
+            class="fas fa-id-card"
+            style="color: #74829a; margin-right: 10px"></i
           >Müşteri Bilgileri</label
         >
       </div>
@@ -35,8 +40,7 @@
         ref="musteriBilgileri"
         class="col-9"
         id="musteriBilgileri"
-        v-show="selectedValue"
-      >
+        v-show="selectedValue">
         <div class="form-floating mb-3">
           <input
             type="text"
@@ -44,8 +48,7 @@
             id="musteriUnvani"
             placeholder="Unvan"
             name="title"
-            v-model="title"
-          />
+            v-model="title" />
           <label for="musteriUnvani">Unvan</label>
         </div>
         <div class="form-floating mb-3">
@@ -55,8 +58,7 @@
             id="vergiDairesi"
             name="vergiDairesi"
             placeholder="Vergi Dairesi"
-            v-model="vergiDairesi"
-          />
+            v-model="vergiDairesi" />
           <label for="vergiDairesi">Vergi Dairesi</label>
         </div>
         <div class="form-floating mb-3">
@@ -66,8 +68,7 @@
             id="vergiNo"
             placeholder="Vergi No"
             name="Vergi No"
-            v-model.number="vergiNo"
-          />
+            v-model.number="vergiNo" />
           <label for="vergiNo">Vergi No</label>
         </div>
         <div class="form-floating mb-3">
@@ -77,8 +78,7 @@
             id="musteriAdresi"
             name="musteriAdresi"
             placeholder="Adres"
-            v-model="adres"
-          />
+            v-model="adres" />
           <label for="musteriAdresi">Adres</label>
         </div>
       </div>
@@ -115,7 +115,9 @@ export default {
     },
     // seçeneklerden birini seçmek için bir fonksiyon tanımla
     selectCustomer(id) {
-      this.selectedCustomer = this.customers.find((customer) => customer.id === id);
+      this.selectedCustomer = this.customers.find(
+        (customer) => customer.id === id
+      );
     },
   },
   computed: {

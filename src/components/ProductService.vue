@@ -3,8 +3,7 @@
     <form>
       <div
         class="container-fluid"
-        style="background: #fff; margin-top: 20px; width: 97%"
-      >
+        style="background: #fff; margin-top: 20px; width: 97%">
         <div
           class="row"
           style="
@@ -14,12 +13,10 @@
             margin-bottom: 20px !important;
             background-color: #f7f7f6 !important;
             font-weight: bold;
-            
-          "
-        >
-          <div class="col-3" style="text-align: center;">Ürün / Hizmet</div>
-          <div class="col-2" style="text-align: center;">Depo</div>
-          <div class="col-2" style="text-align: center;">Birim</div>
+          ">
+          <div class="col-3" style="text-align: center">Ürün / Hizmet</div>
+          <div class="col-2" style="text-align: center">Depo</div>
+          <div class="col-2" style="text-align: center">Birim</div>
           <div class="col-1">Miktar</div>
           <div class="col-1">Birim Fiyat</div>
           <div class="col-1">KDV</div>
@@ -34,8 +31,7 @@
                 :siraNo="row.siraNo"
                 @removeNewDiv="removeNewDiv(row.siraNo, index)"
                 :productData="row.productData"
-                @updateProductData="updateProductData(index, $event)"
-              />
+                @updateProductData="updateProductData(index, $event)" />
             </tr>
           </tbody>
         </div>
@@ -47,8 +43,7 @@
               v-on:click.prevent="createNewDiv"
               type="button"
               class="btn me-5 fw-bold border border-black p-2"
-              style="background-color: #f7f7f6"
-            >
+              style="background-color: #f7f7f6">
               ÜRÜN / HİZMET
             </button>
           </div>
@@ -62,39 +57,32 @@
           font-size: 15px;
           font-weight: bold;
           color: #ff0000;
-        "
-      ></div>
+        "></div>
 
       <div class="save-footer float-end">
-
         <button
           type="button"
           class="fixed-button btn btn-success p-1 fs-6 px-3 fw-bold m-3"
-          @click="sendProduct"
-        >
+          @click="sendProduct">
           <i class="fas fa-save" style="margin-right: 10px"></i>KAYDET
         </button>
-
       </div>
     </form>
   </div>
 </template>
 
 <script>
-
 import NewDiv from "./NewDiv.vue";
 import axios from "axios";
 import * as Vue from "vue";
 
 export default {
-  
   name: "ProductService",
   components: {
     NewDiv,
   },
 
   data() {
-
     return {
       siraNo: 0,
       rows: [],
@@ -102,7 +90,6 @@ export default {
   },
 
   methods: {
-
     confirmClearFormAndRefreshPage() {
       if (confirm("İşlemi onaylıyor musunuz?")) {
         window.location.reload();
@@ -151,9 +138,7 @@ export default {
 };
 </script>
 
-
 <style scoped>
-
 .product-service {
   border: 1px solid black;
   padding: 10px;

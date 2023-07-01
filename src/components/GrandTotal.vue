@@ -12,8 +12,7 @@
                 id="toplamindirim"
                 name="toplam_indirim"
                 value=""
-                class="border-0 border-bottom mb-4"
-              />
+                class="border-0 border-bottom mb-4" />
             </td>
           </tr>
           <tr>
@@ -58,8 +57,7 @@
         <button
           type="button"
           class="fixed-button btn btn-success p-1 fs-6 px-3 fw-bold m-3"
-          @click="totalData()"
-        >
+          @click="totalData()">
           <i class="fas fa-save" style="margin-right: 10px"></i>KAYDET
         </button>
       </div>

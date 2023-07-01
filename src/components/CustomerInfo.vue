@@ -38,8 +38,7 @@
               id="tip"
               name="tip"
               class="m-1"
-              v-model.trim.lazy="tipValue"
-            />
+              v-model.trim.lazy="tipValue" />
             <label for="product1" class="text-dark">Alış</label>
           </div>
           <div class="m-2">
@@ -48,15 +47,13 @@
               id="tip"
               name="tip"
               class="m-1"
-              v-model.trim.lazy="tipValue"
-            />
+              v-model.trim.lazy="tipValue" />
             <label for="product2" class="text-dark">Satış</label>
           </div>
-          </div>
-
+        </div>
       </div>
 
-      <div  class="form-group m-2">
+      <div class="form-group m-2">
         <div class="col-3">
           <label for="selected" class="form-label col-3 w-75"
             ><i
@@ -64,10 +61,7 @@
               style="color: #74829a; margin-right: 10px"></i
             >Müşteri</label
           >
-          <a class="btn btn-danger" @click="openModal">
-            Müşteri Seç
-          </a>
-          
+          <a class="btn btn-danger" @click="openModal"> Müşteri Seç </a>
         </div>
         <div class="col-9">
           <select
@@ -88,7 +82,7 @@
           </select>
         </div>
       </div>
-      <div  class="form-group m-2">
+      <div class="form-group m-2">
         <div class="col-3">
           <label for="MusteriBilgileri" class="form-label col-3 w-75"
             ><i
