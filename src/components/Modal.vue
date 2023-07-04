@@ -28,6 +28,7 @@
 import customers from "../data/customers";
 
 export default {
+  
   props: ["showModal"],
   data() {
     return {
