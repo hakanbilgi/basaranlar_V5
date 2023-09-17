@@ -12,6 +12,7 @@
         </div>
 
         <div class="col-9">
+
           <input
             type="text"
             class="form-control border-0 border-bottom fw-bold"
@@ -20,6 +21,7 @@
             name="formBaslik"
             v-model="formBaslik" />
         </div>
+        
       </div>
       <div class="form-group m-2">
         <div class="col-3">
